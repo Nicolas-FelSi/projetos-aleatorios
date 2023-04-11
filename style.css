@@ -16,7 +16,7 @@ body {
 main {
     background-color: white;
     width: min(37.5rem, 90%);
-    padding: 3.5rem  1rem 6.25rem;
+    padding: 3.5rem 1rem;
     margin: 0 auto;
     text-align: center;
     border-radius: .5rem;
@@ -37,6 +37,29 @@ form {
 
 input {
     width: 6.25rem;
+    background-color: rgb(214, 212, 212);
+    border-radius: .25rem 0 0 .25rem;
+}
+
+input, button {
+    padding: .8rem;
+    border: none;
+}
+
+button {
+    background-color: #7878E9;
+    font-weight: bold;
+    color: white;
+    border-radius: 0 .25rem .25rem 0;
+    cursor: pointer;
+}
+
+.screen2 h1 {
+    font-weight: 400;
+}
+
+.screen2 button {
+    border-radius: .25rem;
 }
 
 .hide {

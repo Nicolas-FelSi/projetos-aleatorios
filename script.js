@@ -5,8 +5,8 @@ const btnTry = document.querySelector("#btnTry")
 const btnReset = document.querySelector("#btnReset")
 let tentativas = 0
 
-btnTry.addEventListener("click", event => {
-    event.preventDefault()
+btnTry.addEventListener("click", (e) => {
+    e.preventDefault()
 
     const input = document.querySelector("#inputNumber")
     tentativas++
@@ -21,9 +21,12 @@ btnTry.addEventListener("click", event => {
     input.value = ""
 })
     
-btnReset.addEventListener("click", event => {
+btnReset.addEventListener("click", (e) => {
+    e.preventDefault()
     screen1.classList.remove("hide")
     screen2.classList.add("hide")
-    tentativas = 1
+    tentativas = 0
 })
+
+
 console.log(numberRandom);
