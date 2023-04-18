@@ -1,15 +1,11 @@
-const Erro = {
+export const Erro = {
+    erro: document.querySelector(".erro"),
+
     visivel() {
-        document.querySelector(".erro").classList.remove("hide")
+        this.erro.classList.remove("hide")
     },
 
     escondido() {
-        document.querySelector(".erro").classList.add("hide")
+        this.erro.classList.add("hide")
     }
 }
-
-function isNotANumber(valor) {
-    return isNaN(valor) || valor == ""
-}
-
-export { Erro, isNotANumber }

@@ -2,114 +2,112 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    border: none;
 }
 
 body {
     background-color: #060923;
-    width: 100vw;
-}
-
-body, button {
-    font-family: 'Roboto', sans-serif;
+    color: #060923;
 }
 
 .erro {
-    background-color: #DF4D44;
+    background-color: #DE4E49;
     color: white;
+    font-weight: 700;
     text-align: center;
     padding: .25rem;
 }
 
 .container {
-    height: 100vh; 
     display: grid;
     place-content: center;
+    height: 100vh;
     position: relative;
+}
+
+main, input, button {
+    border-radius: .25rem;
 }
 
 main {
     background-color: white;
+    margin: 0 auto;   
+    padding: 2rem;
     width: 21.875rem;
-    margin: 0 auto;
-    padding: 3.125rem;
-    border-radius: .25rem;
 }
 
 h1 {
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+label, button {
+    display: block;
 }
 
 label {
-    display: block;
     padding-bottom: .25rem;
 }
 
-input {
-    display: block;
-    padding: 1rem;
-    border: 1px solid rgb(66, 202, 243);
-    border-radius: .25rem;
-    background-color: rgb(230, 230, 230);
+input, button {
     width: 100%;
+}
+
+input {
+    padding: 1rem;
+    background-color: #DFE2E9;
+    border: 1px solid #afafaf;
 }
 
 #idPeso {
     margin-bottom: 1rem;
 }
 
-form button {
-    background-color: #317699;
+button {
     margin-top: 2rem;
     padding: 1rem;
+    background-color: #34779B;
     color: white;
     font-weight: 700;
-    border: none;
-    border-radius: .25rem;
-    width: 100%;
+    cursor: pointer;
+
     display: flex;
     align-items: center;
     justify-content: center;
     gap: .5rem;
-    cursor: pointer;
 }
 
-form button::after {
-    content: "";
+button::after {
+    content: '';
     background: url(../images/iconmonstr-arrow-right-thin.svg) no-repeat;
+    width: 1.7rem;
+    height: 1.5rem;
     display: inline-block;
-    
-    width: 25px;
-    height: 25px;
 }
 
 .modal {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #060923af;
     position: absolute;
-    inset: 0;  
+    inset: 0;
 
     display: grid;
     place-content: center;
+    height: 100vh;
 }
 
 .modal__card {
     background-color: white;
-    width: 18.75rem;
-    margin: 0 auto;
-    padding: 3.125rem;
+    padding: 2rem;
     border-radius: .25rem;
-    text-align: center;
-
-    position: relative;
+    position: relative
 }
 
-.modal__button-close {
+img {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 1rem 1rem 0 0;
+    padding: .5rem;
     cursor: pointer;
-    background: none;
-    border: none;
 }
 
 .hide {

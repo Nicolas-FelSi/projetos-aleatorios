@@ -1,24 +1,13 @@
-const Modal = {
-    buttonClose: document.querySelector(".modal__button-close"),
-    titleModal: document.querySelector("h2.title"),
-
-    escondido: function() {
-        document.querySelector(".modal").classList.add("hide")
-    },
+export const Modal = {
+    h2: document.querySelector("h2"),
+    modal: document.querySelector(".modal"),
+    buttonClose: document.querySelector("img"),
 
     visivel() {
-        document.querySelector(".modal").classList.remove("hide")
+        this.modal.classList.remove("hide")
+    },
+
+    escondido() {
+        this.modal.classList.add("hide")
     }
 }
-
-Modal.buttonClose.addEventListener("click", () => {
-    Modal.escondido()
-})
-
-window.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-        Modal.escondido()
-    }
-})
-
-export { Modal }
