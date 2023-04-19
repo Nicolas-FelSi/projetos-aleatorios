@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo de advinhação</title>
+    <title>Projeto Adivinhação - DOM</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="main.js" defer type="module"></script>
 </head>
-
 <body>
-    <main>
-        <div class="screen1">
-            <h1>Jogo da adivinhação</h1>
-            <p>Adivinhe o número entre 0 e 10</p>
+    <div class="container">
+        <main class="main">
+            <h1>Jogo da Adivinhação</h1>
+            <p>Adivinhe um número entre 0 e 10</p>
             <form action="#">
-                <input id="inputNumber" type="number">
-                <button id="btnTry">Tentar</button>
+                <input type="number" id="idNumber">
+                <button id="btnSubmit">Tentar</button>
             </form>
+        </main>
+        <div class="main acerto hide">
+            <h2>Acertou em 3 tentativas</h2>
+            <button id="btnReset">Jogar novamente</button>
         </div>
-        <div class="screen2 hide">
-            <h1 id="tentativaTexto">Acertou em 3 tentativas</h1>
-            <form action="#">
-                <button on id="btnReset">Jogar novamente</button>
-            </form>
-        </div>
-               
-    </main>
-    <script src="script.js"></script>
+    </div>  
 </body>
-
 </html>
