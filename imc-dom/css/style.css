@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+}
+
+body {
+    background-color: #060923;
+    color: #060923;
+}
+
+.erro {
+    background-color: #DE4E49;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    padding: .25rem;
+}
+
+.container {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    position: relative;
+}
+
+main, input, button {
+    border-radius: .25rem;
+}
+
+main {
+    background-color: white;
+    margin: 0 auto;   
+    padding: 2rem;
+    width: 21.875rem;
+}
+
+h1 {
+    padding-bottom: 1rem;
+}
+
+label, button {
+    display: block;
+}
+
+label {
+    padding-bottom: .25rem;
+}
+
+input, button {
+    width: 100%;
+}
+
+input {
+    padding: 1rem;
+    background-color: #DFE2E9;
+    border: 1px solid #afafaf;
+}
+
+#idPeso {
+    margin-bottom: 1rem;
+}
+
+button {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #34779B;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+button::after {
+    content: '';
+    background: url(../images/iconmonstr-arrow-right-thin.svg) no-repeat;
+    width: 1.7rem;
+    height: 1.5rem;
+    display: inline-block;
+}
+
+.modal {
+    background-color: #060923af;
+    position: absolute;
+    inset: 0;
+
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+.modal__card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: .25rem;
+    position: relative
+}
+
+img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .5rem;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}

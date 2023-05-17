@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+body {
+    background: linear-gradient(287.56deg, #A8C4FA 100%, #CAE7FA 0%);     
+}
+
+body, button {
+    font-family: 'DM sans', sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.main {
+    background-color: white;
+    padding: 2.5rem;
+    width: min(28.125rem, 90%);
+    margin: 0 auto;
+    text-align: center;
+    border-radius: .25rem;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+p {
+    padding: 1rem 0 2rem 0;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+input, button {
+    padding: .9rem;
+}
+
+input {
+    width: 5rem;
+    background-color: rgb(192, 192, 192);
+    border-radius: .25rem 0 0 .25rem;
+}
+
+button {
+    border-radius: 0 .25rem .25rem 0;
+    background-color: #7979EA;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(1.2);
+    color: black;
+}
+
+button:active {
+    background-color: #4b4b91;
+    color: white;
+}
+
+.acerto button {
+    border-radius: .25rem;
+    margin-top: 1rem;
+}
+
+.hide {
+    display: none;
+}
