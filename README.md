@@ -1,7 +1,7 @@
 # projetos-aleatorios
 Repositório para projetos aleatórios.
 <ol>
-    <li style="margin-bottom: 16px">
+    <li style="margin-bottom: 16px;">
         <a style="display: block;" href="http://nicolas-felsi.github.io/projetos-aleatorios/imc-dom/" target="_blank" rel="noopener noreferrer">Calculadora IMC</a>
         <img style="display: block;" width="500px" src="./readme-images/scrnli_17_05_2023_20-22-32.png"></img>
     </li>
