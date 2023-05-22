@@ -1,0 +1,100 @@
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+main {    
+    background: linear-gradient(var(--secondary-color), var(--primary-color));
+    padding: 1rem;
+    height: 100%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.288);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+h1 {
+    text-align: center;
+    color: var(--light-color);
+}
+
+input, select {
+    width: 100%;
+    padding: 1rem;
+    border-radius: .25rem;
+    border: none;
+    outline: none;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+
+    position: relative;
+}
+
+.div__cep,
+.div__endereco,
+.div__complemento,
+.div__numero,
+.div__bairro,
+.div__cidade,
+.div__estado {
+    position: relative;
+    width: 100%;
+}
+
+label {
+    position: absolute;
+    top: 1rem;
+    left: .5rem;
+    color: var(--light-color);
+
+    transition: .5s ease;
+} 
+
+select + label {
+    font-size: .7rem;
+    top: .25rem;
+    left: .25rem;
+    color: var(--terciary-color);
+}
+
+input:focus {
+    border: 2px solid var(--light-color);
+}
+
+input:not(:focus)::placeholder {
+    opacity: 0;
+}
+
+input:focus + label, input:not(:placeholder-shown) + label {
+    font-size: .7rem;
+    top: .25rem;
+    left: .25rem;
+    color: var(--terciary-color);
+} 
+
+button {
+    padding: 1rem;
+    border-radius: .25rem;
+    border: none;
+    background-color: var(--terciary-color);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.397);
+    color: var(--primary-color);
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: .5s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(130deg, var(--light-color), var(--dark-color));
+    color: white;
+}
+
+#erro {
+    color: red;
+    padding-top: .5rem;
+}

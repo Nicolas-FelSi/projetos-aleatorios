@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto CEP API</title>   
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+    <script src="./js/main.js" type="module" defer></script>
+</head>
+<body> 
+    <main>     
+        <form>
+            <h1>Via Cep</h1>
+            <div class="div__cep">
+                <input id="cep" type="text" placeholder="ex: 89275000" required maxlength="9">
+                <label for="cep">CEP</label>
+                <p id="erro"></p>
+            </div>
+            <div class="div__endereco">
+                <input id="endereco" type="text" placeholder="ex: Rua Alfonso Zils" required>
+                <label for="endereco">Endereço</label>
+            </div>
+            <div class="div__numero">
+                <input id="numero" type="number" placeholder="ex: 53" required>
+                <label for="numero">Número</label>
+            </div>
+            <div class="div__complemento">
+                <input id="complemento" type="text" placeholder="ex: Casa, apartamento, etc">
+                <label for="complemento">Complemento</label>
+            </div>
+            <div class="div__bairro">
+                <input id="bairro" type="text" placeholder="ex: Centro" required>
+                <label for="bairro">Bairro</label>
+            </div>
+            <div class="div__cidade">
+                <input id="cidade" type="text" placeholder="ex: Florianópolis" required>
+                <label for="cidade">Cidade</label>
+            </div>
+            <div class="div__estado">
+                <select id="estado" required>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+                <label>Estado</label>
+              </div>
+              <button>Enviar</button>
+        </form> 
+        <div class="background">
+      
+        </div>
+    </main>
+</body>
+</html>

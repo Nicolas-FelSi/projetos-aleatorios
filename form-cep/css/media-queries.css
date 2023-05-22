@@ -1,0 +1,61 @@
+@media screen and (min-width: 464px ){ 
+    body {
+        background-color: var(--terciary-color);
+    }
+    
+    main {
+        width: min(29rem, 90%);
+        margin: 1rem auto;
+        border-radius: 1rem;
+        height: auto;
+    }
+
+    form {
+        width: min(22rem, 90%);
+        margin: 0 auto;
+    }
+
+    button {
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (min-width: 1000px ){
+    main {
+        width: 90%;
+        display: flex;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    form {
+        padding: 1rem 1rem 2rem 1rem; 
+        width: 40%;
+    }
+
+    .div__cep,
+    .div__endereco,
+    .div__complemento,
+    .div__numero,
+    .div__bairro,
+    .div__cidade,
+    .div__estado,
+    button {
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .background {
+        background: url(../image/alexandru-acea--WBYxmW4yuw-unsplash.jpg) no-repeat center center;
+        background-size: cover;
+        width: 60%;
+
+        transition: 3s ease;
+    }
+
+    .background:hover {
+        transform: scale(1.05);
+        filter: blur(1px);
+    }
+}

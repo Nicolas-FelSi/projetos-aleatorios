@@ -1,0 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --primary-color:#35278C;
+    --secondary-color: #5155A6;
+    --terciary-color:#BF8665;
+    --dark-color: #022623;
+    --light-color:#89D9D1;
+}
+
+.hide {
+    display: none;
+}
+
+ 
+
+
