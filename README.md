@@ -9,6 +9,11 @@ Repositório para projetos aleatórios.
         <a href="http://nicolas-felsi.github.io/projetos-aleatorios/numero-aleatorio/" target="_blank" rel="noopener noreferrer">Jogo acertar número aleatório</a>
         <img style="display: block;" width="500px" src="./readme-images/scrnli_17_05_2023_20-23-48.png">
     </li>
+    <li style="display: flex; flex-direction: column;">
+        <a href="https://nicolas-felsi.github.io/projetos-aleatorios/form-cep/" target="_blank" rel="noopener noreferrer">Consumo da api ViaCep</a>
+        <img style="display: block;" width="500px" src="./readme-images/mobile-form-cep.png">
+        <img style="display: block;" width="500px" src="./readme-images/desktop-form-cep.png">
+    </li>
 </ul>
 
 
