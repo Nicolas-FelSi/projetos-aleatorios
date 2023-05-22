@@ -11,7 +11,7 @@ Repositório para projetos aleatórios.
     </li>
     <li style="display: flex; flex-direction: column;">
         <a href="https://nicolas-felsi.github.io/projetos-aleatorios/form-cep/" target="_blank" rel="noopener noreferrer">Consumo da api ViaCep</a>
-        <img style="display: block;" width="400px" src="./readme-images/mobile-form-cep.png">
+        <img style="display: block;" width="250px" src="./readme-images/mobile-form-cep.png">
         <img style="display: block;" width="500px" src="./readme-images/desktop-form-cep.png">
     </li>
 </u>
