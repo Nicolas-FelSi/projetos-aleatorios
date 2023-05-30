@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de formulário</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/main.js" defer type="module"></script>
+</head>
+<body>
+    <main>
+        <form>
+            <div class="content__form">
+                <div>
+                    <input type="text" id="inputName" placeholder="Digite seu nome" required>
+                    <label for="inputName">Nome</label>
+                </div>
+                <div>
+                    <input type="text" id="inputRg" placeholder="Digite seu RG" required>
+                    <label for="inputRg">RG</label>
+                </div>
+                <div>
+                    <input type="text" id="inputCpf" placeholder="123.456.789-10" required>
+                    <label for="inputCpf">CPF</label>
+                </div>
+                <div>
+                    <input type="text" id="inputNumberCell" placeholder="(XX)XXXXX-XXXX" required>
+                    <label for="inputNumberCell">Celular</label>
+                </div>
+                <div>
+                    <input type="date" id="inputDate" required>
+                    <label for="inputDate">Data de nascimento</label>
+                </div>
+                <div class="div__checkbox">
+                    <input type="checkbox" id="inputCheck" required>
+                    <label for="inputCheck">Li e concorco com os termos da Política de Privacidade.</label>
+                </div>
+                <div class="div__buttons">
+                    <button type="submit">Cadastrar</button>
+                    <button type="reset">Limpar</button>
+                </div>
+            </div>
+        </form>
+        <aside></aside>
+    </main>
+</body>
+</html>

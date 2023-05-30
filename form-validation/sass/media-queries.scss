@@ -1,0 +1,5 @@
+@media screen and (min-width: 768px){
+    main {
+        @include display-flex(flex, center, center)
+    }
+}

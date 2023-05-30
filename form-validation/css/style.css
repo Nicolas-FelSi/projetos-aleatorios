@@ -1,0 +1,97 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #404040;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+main {
+  height: 100%;
+}
+
+form {
+  background-color: #F2F2F2;
+  padding: 2rem 1rem 1rem 1rem;
+  width: clamp(20rem, 90%, 48rem);
+  height: 100%;
+  margin: 0 auto;
+  color: #0D0D0D;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.267);
+}
+form .content__form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 auto;
+}
+form .content__form div:not(.div__checkbox) {
+  position: relative;
+}
+form .content__form div:not(.div__checkbox) input:not(input[type=checkbox]) {
+  padding: 1rem 1rem 0.5rem 1rem;
+  width: clamp(10rem, 100%, 30rem);
+  background-color: transparent;
+  border-bottom: 3px solid #A4A4A6;
+  color: #404040;
+}
+form .content__form div:not(.div__checkbox) input:not(input[type=checkbox]):focus {
+  border-bottom: 3px solid rgb(69, 109, 241);
+  transition: all 0.5s ease;
+}
+form .content__form div:not(.div__checkbox) input:not(input[type=checkbox]):focus + label {
+  top: -0.5rem;
+  transition: all 0.5s ease;
+  color: rgb(69, 109, 241);
+  font-weight: 700;
+}
+form .content__form div:not(.div__checkbox) input:not(input[type=checkbox])::placeholder {
+  color: #A4A4A6;
+  opacity: 0;
+}
+form .content__form div:not(.div__checkbox) input:not(input[type=checkbox]):focus::placeholder {
+  opacity: 1;
+  transition: 0.5s ease;
+}
+form .content__form div:not(.div__checkbox) input:not(input[type=checkbox]):not(:placeholder-shown) + label {
+  top: -0.5rem;
+}
+form .content__form div:not(.div__checkbox) label:not(label[for=inputCheck]) {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+}
+form .content__form .div__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+}
+form .content__form .div__buttons button {
+  padding: 1rem;
+  width: 100%;
+  background-color: rgb(69, 109, 241);
+  border-radius: 0.25rem;
+  color: #F2F2F2;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+/*# sourceMappingURL=style.css.map */
