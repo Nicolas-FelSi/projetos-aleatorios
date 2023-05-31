@@ -1,5 +1,23 @@
 @media screen and (min-width: 768px){
     main {
-        @include display-flex(flex, center, center)
+        @include display-flex(flex, center, center);
+        width: clamp(768px, 100%, 1400px);
+        margin: 0 auto;
+        height: 100vh;
+        padding: 2rem;
+    }
+    
+    form {
+        padding: 2rem 1rem 0 1rem;
+        width: 50%;
+        height: auto !important;
+    }
+}
+
+@media screen and (min-width: 1000px){
+   aside {
+        background: url(https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80) no-repeat center center;
+        width: 50%;
+        height: 35.75rem;
     }
 }

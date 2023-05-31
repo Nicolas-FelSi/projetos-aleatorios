@@ -20,33 +20,44 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: clamp(768px, 100%, 1400px);
+    margin: 0 auto;
+    height: 100vh;
+    padding: 2rem;
+  }
+  form {
+    padding: 2rem 1rem 0 1rem;
+    width: 50%;
+    height: auto !important;
   }
 }
-main {
-  height: 100%;
+@media screen and (min-width: 1000px) {
+  aside {
+    background: url(https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80) no-repeat center center;
+    width: 50%;
+    height: 35.75rem;
+  }
 }
-
 form {
   background-color: #F2F2F2;
-  padding: 2rem 1rem 1rem 1rem;
-  width: clamp(20rem, 90%, 48rem);
-  height: 100%;
-  margin: 0 auto;
+  height: 100vh;
   color: #0D0D0D;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.267);
 }
 form .content__form {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  padding: 1rem;
+  width: clamp(20rem, 100%, 560px);
   margin: 0 auto;
+  gap: 2rem;
 }
 form .content__form div:not(.div__checkbox) {
   position: relative;
 }
 form .content__form div:not(.div__checkbox) input:not(input[type=checkbox]) {
   padding: 1rem 1rem 0.5rem 1rem;
-  width: clamp(10rem, 100%, 30rem);
+  width: 100%;
   background-color: transparent;
   border-bottom: 3px solid #A4A4A6;
   color: #404040;
@@ -83,6 +94,7 @@ form .content__form .div__buttons {
   justify-content: center;
   width: 100%;
   gap: 1rem;
+  margin-bottom: 2rem;
 }
 form .content__form .div__buttons button {
   padding: 1rem;

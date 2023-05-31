@@ -1,80 +1,75 @@
 @import "./base.scss";
 @import "./media-queries.scss";
 
-main {
-    height: 100%;
-}
-
 form {
-    background-color: $light-color;    
-    padding: 2rem 1rem 1rem 1rem;
-    width: clamp(20rem, 90%, 48rem);
-    height: 100%;
-    margin: 0 auto;
+    background-color: $light-color;
+    height: 100vh;
     color: $dark-color;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.267);
 
-    .content__form {       
+    .content__form {
         display: flex;
         flex-direction: column;
+        padding: 1rem;
+        width: clamp(20rem, 100%, 560px);
+        margin: 0 auto;
         gap: 2rem;
-        margin: 0 auto;    
-        
+
         div:not(.div__checkbox) {
             position: relative;
-        
-        input:not(input[type="checkbox"]) {
-            padding: 1rem 1rem .5rem 1rem;
-            width: clamp(10rem, 100%, 30rem);
-            background-color: transparent;
-            border-bottom: 3px solid $terciary-color;
-            color: $secundary-color;
 
-            &:focus {
-                border-bottom: 3px solid $blue-color;
-                transition: all .5s ease;
+            input:not(input[type="checkbox"]) {
+                padding: 1rem 1rem 0.5rem 1rem;
+                width: 100%;
+                background-color: transparent;
+                border-bottom: 3px solid $terciary-color;
+                color: $secundary-color;
+
+                &:focus {
+                    border-bottom: 3px solid $blue-color;
+                    transition: all 0.5s ease;
+                }
+
+                &:focus + label {
+                    top: -0.5rem;
+                    transition: all 0.5s ease;
+                    color: $blue-color;
+                    font-weight: 700;
+                }
+
+                &::placeholder {
+                    color: $terciary-color;
+                    opacity: 0;
+                }
+
+                &:focus::placeholder {
+                    opacity: 1;
+                    transition: 0.5s ease;
+                }
+
+                &:not(:placeholder-shown) + label {
+                    top: -0.5rem;
+                }
             }
 
-            &:focus + label {
-                top: -.5rem;
-                transition: all .5s ease;
-                color: $blue-color;
-                font-weight: 700;
-            }
-
-            &::placeholder {
-                color: $terciary-color;
-                opacity: 0;
-            }
-
-            &:focus::placeholder {
-                opacity: 1;
-                transition: .5s ease
-            }
-
-            &:not(:placeholder-shown) + label{
-                top: -.5rem;
-            }
-        }
-
-            label:not(label[for=inputCheck]) {
+            label:not(label[for="inputCheck"]) {
                 position: absolute;
                 top: 1rem;
                 left: 0;
-            }  
-
+            }
         }
 
         .div__buttons {
             @include display-flex(flex, center, center);
             width: 100%;
             gap: 1rem;
+            margin-bottom: 2rem;
 
             button {
                 padding: 1rem;
                 width: 100%;
                 background-color: $blue-color;
-                border-radius: .25rem;
+                border-radius: 0.25rem;
                 color: $light-color;
                 font-weight: 700;
                 letter-spacing: 1.2px;
@@ -82,4 +77,3 @@ form {
         }
     }
 }
-

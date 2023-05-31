@@ -5,6 +5,13 @@ $dark-color: #0D0D0D;
 $light-color: #F2F2F2;
 $blue-color: rgb(69, 109, 241);
 
+@mixin display-flex($display, $align, $justify) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 * {
     padding: 0;
     margin: 0;
@@ -22,11 +29,6 @@ body {
     background-color: $secundary-color;
 }
 
-@mixin display-flex($display, $align, $justify) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 
 
