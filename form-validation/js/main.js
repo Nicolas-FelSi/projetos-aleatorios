@@ -81,9 +81,24 @@ function verificaCampo(campo) {
     }    
 }
 
-camposForm.buttonSubmit.addEventListener("click", () => {
+camposForm.buttonSubmit.addEventListener("submit", () => {
     const confirmCadastro = confirm("Deseja cadastrar esses dados?")
-    if (confirmCadastro) {
+    let cadastroValido;
+    camposForm.camposDoFormulário.forEach( campo => {
+        cadastroValido = campo.checkValidity()
+        return cadastroValido
+    })
+    console.log(cadastroValido);
+    if (confirmCadastro && cadastroValido) {
         alert("Seus dados foram cadastrados")
     } 
+})
+
+camposForm.buttonClear.addEventListener("click", (event) => {
+    const confirmClear = confirm("Deseja limpar esses dados?")
+    if (confirmClear) {
+        alert("Campos resetados.")
+    } else {
+        event.preventDefault()  
+    }
 })
