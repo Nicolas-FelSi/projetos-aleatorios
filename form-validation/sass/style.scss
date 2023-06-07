@@ -3,17 +3,21 @@
 
 form {
     background-color: $light-color;
-    height: 100vh;
     color: $dark-color;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.267);
 
     .content__form {
-        display: flex;
+        display: flex;           
+        gap: 2rem; 
         flex-direction: column;
         padding: 1rem;
-        width: clamp(20rem, 100%, 560px);
-        margin: 0 auto;
-        gap: 2rem;
+        
+        .inputs__form {
+            display: flex;           
+            gap: 2rem;
+            flex-direction: column;
+            justify-content: center;
+        }
 
         div:not(.div__checkbox) {
             position: relative;
@@ -73,7 +77,44 @@ form {
                 color: $light-color;
                 font-weight: 700;
                 letter-spacing: 1.2px;
+                cursor: pointer;
+
+                &:hover {
+                    scale: (1.05);
+                    transition: all .9s ease;
+                    filter: brightness(1.4);
+                    color: $dark-color;
+                }
             }
         }
     }
 }
+
+.border-color-valid {
+    border-bottom: 3px solid rgb(84, 201, 84) !important;
+}
+
+.color-valid {
+    color: rgb(84, 201, 84) !important;
+}
+
+.border-color-invalid {
+    border-bottom: 3px solid red !important;
+}
+
+.color-invalid {
+    color: red !important;
+}
+
+.textError {
+    display: block;
+    color: red;
+    font-weight: 700;
+    padding-top: .25rem;
+}
+
+.hide {
+    display: none;
+}
+
+

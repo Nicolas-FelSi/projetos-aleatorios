@@ -17,29 +17,42 @@
     <main>
         <form>
             <div class="content__form">
-                <div>
-                    <input type="text" id="inputName" placeholder="Digite seu nome" required>
-                    <label for="inputName">Nome</label>
-                </div>
-                <div>
-                    <input type="text" id="inputRg" placeholder="Digite seu RG" required>
-                    <label for="inputRg">RG</label>
-                </div>
-                <div>
-                    <input type="text" id="inputCpf" placeholder="123.456.789-10" required>
-                    <label for="inputCpf">CPF</label>
-                </div>
-                <div>
-                    <input type="text" id="inputNumberCell" placeholder="(XX)XXXXX-XXXX" required>
-                    <label for="inputNumberCell">Celular</label>
-                </div>
-                <div>
-                    <input type="date" id="inputDate" required>
-                    <label for="inputDate">Data de nascimento</label>
-                </div>
-                <div class="div__checkbox">
-                    <input type="checkbox" id="inputCheck" required>
-                    <label for="inputCheck">Li e concorco com os termos da Política de Privacidade.</label>
+                <div class="inputs__form">
+                    <div>
+                        <input type="text" id="inputName" name="nome" placeholder="Digite seu nome" required>
+                        <label for="inputName">Nome</label>
+                        <span class="textError"></span>
+                    </div>
+                    <div>
+                        <input type="email" id="inputEmail" name="email" placeholder="seuemail@host.com" required>
+                        <label for="inputEmail">Email</label>
+                        <span class="textError"></span>
+                    </div>
+                    <div>
+                        <input type="text" id="inputRg" name="rg" placeholder="Digite seu RG" required>
+                        <label for="inputRg">RG</label>
+                        <span class="textError"></span>
+                    </div>
+                    <div>
+                        <input type="text" id="inputCpf" name="cpf" placeholder="123.456.789-10" required minlength="11" maxlength="14">
+                        <label for="inputCpf">CPF</label>
+                        <span class="textError"></span>
+                    </div>
+                    <div>
+                        <input type="text" id="inputNumberCell" name="celular" placeholder="(XX)XXXXX-XXXX" required minlength="10" maxlength="15">
+                        <label for="inputNumberCell">Celular</label>
+                        <span class="textError"></span>
+                    </div>
+                    <div>
+                        <input type="date" id="inputDate" name="data" required>
+                        <label for="inputDate">Data de nascimento</label>
+                        <span class="textError"></span>
+                    </div>
+                    <div class="div__checkbox">
+                        <input type="checkbox" id="inputCheck" name="termos" required>
+                        <label for="inputCheck">Li e concorco com os termos da Política de Privacidade.</label>
+                        <span class="textError"></span>
+                    </div>
                 </div>
                 <div class="div__buttons">
                     <button type="submit">Cadastrar</button>
@@ -47,7 +60,6 @@
                 </div>
             </div>
         </form>
-        <aside></aside>
     </main>
 </body>
 </html>
