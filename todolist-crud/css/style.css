@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: "Rubik", sans-serif;
+}
+
+.hide {
+  display: none !important;
+}
+
+@media screen and (min-width: 1064px) {
+  section.section__tasks {
+    gap: 0 1rem;
+  }
+  div.div__task {
+    max-width: 31.25rem;
+    padding: 2rem;
+  }
+  button {
+    font-size: calc(1rem + 1vw);
+  }
+  .add__task .div__input {
+    position: relative;
+  }
+  .add__task .div__input input#addTask {
+    padding: 2rem;
+  }
+  .add__task .div__input input#addTask::placeholder {
+    font-size: calc(1rem + 0.5vw);
+  }
+  .add__task .div__input input#addTask:not(:placeholder-shown) + label {
+    top: -0.5rem;
+    font-size: 12rem;
+    padding: 0 0.25rem;
+  }
+  .add__task .div__input input#addTask:focus + label {
+    background-color: #ffba08;
+    padding: 0 0.25rem;
+    top: -0.5rem;
+    font-size: 14px;
+    color: #032b43;
+    transition: all 0.5s ease;
+  }
+  .add__task .div__input .div__input label {
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+    color: #3f88c5;
+  }
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  padding: 1rem;
+  background-color: #032b43;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container main {
+  width: clamp(17.2969rem, 100%, 64.5rem);
+  font-size: clamp(1rem, 1rem + 1vw, 2vw);
+}
+.container h1 {
+  color: #ffba08;
+}
+.container .add__task, .container .div__input, .container #addTask {
+  width: 100%;
+}
+.container .add__task {
+  margin-top: 2rem;
+}
+.container .add__task .textError {
+  color: #d00000;
+  display: block;
+  text-align: start;
+}
+.container .add__task .div__input-add {
+  display: flex;
+}
+.container .add__task .div__input {
+  position: relative;
+}
+.container .add__task .div__input input {
+  padding: 1rem;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+.container .add__task .div__input input::placeholder {
+  opacity: 0;
+  visibility: hidden;
+}
+.container .add__task .div__input input:focus {
+  outline: 2px solid #ffba08;
+}
+.container .add__task .div__input input:focus::placeholder {
+  opacity: 1;
+  visibility: visible;
+  color: #3f88c5;
+}
+.container .add__task .div__input input:not(:placeholder-shown) + label {
+  top: -0.5rem;
+  font-size: 14px;
+  background-color: #ffba08;
+  padding: 0 0.25rem;
+  color: #032b43;
+}
+.container .add__task .div__input input:focus + label {
+  background-color: #ffba08;
+  padding: 0 0.25rem;
+  top: -0.5rem;
+  font-size: 14px;
+  color: #032b43;
+  transition: all 0.5s ease;
+}
+.container .add__task .div__input label {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: #3f88c5;
+}
+.container .add__task button {
+  padding: 1rem;
+  border-radius: 0 0.25rem 0.25rem 0;
+  background-color: #3f88c5;
+  color: white;
+  cursor: pointer;
+}
+.container .add__task button:hover {
+  scale: 1.05;
+  filter: saturate(2);
+  transition: scale 0.5s ease;
+}
+.container .section__tasks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-top: 1rem;
+  background-color: white;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
+.container .section__tasks .div__task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  height: 48px;
+  padding: 1rem;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.199);
+  width: 100%;
+}
+.container .section__tasks .div__task .input__check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 80%;
+}
+.container .section__tasks .div__task .input__check input[type=checkbox] {
+  accent-color: #136f63;
+}
+.container .section__tasks .div__task .input__check label {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.container .section__tasks .div__task .icons {
+  display: flex;
+  gap: 1rem;
+}
+.container .section__tasks .div__task .icons .fa-regular {
+  cursor: pointer;
+}
+.container .section__tasks .div__task .icons .fa-pen-to-square {
+  color: #ffba08;
+}
+.container .section__tasks .div__task .icons .fa-trash-can {
+  color: red;
+}
+
+/*# sourceMappingURL=style.css.map */

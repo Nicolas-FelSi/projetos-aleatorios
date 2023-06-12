@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+
+    <!-- google fonts - fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- font awesome - icons -->
+    <script src="https://kit.fontawesome.com/51b23194c0.js" crossorigin="anonymous"></script>
+
+    <script type="module" src="js/main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <main>
+            <h1>To-Do List</h1>
+            <div class="add__task">
+                <div class="div__input-add">
+                    <div class="div__input">
+                        <input type="text" id="addTask" placeholder="Adicionar nova tarefa">
+                        <label>Tarefa</label>
+                    </div>
+                    <button id="btnAdd">
+                        Adicionar
+                    </button>
+                </div>
+                <span class="textError"></span>
+            </div>
+
+            <section class="section__tasks"></section>
+        </main>
+    </div>
+</body>
+</html>
