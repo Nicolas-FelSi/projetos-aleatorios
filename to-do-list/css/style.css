@@ -32,7 +32,10 @@ li {
 
 .task-text {
   flex-grow: 2;
-  align-items: center;
+}
+
+.complete-button {
+  margin-right: 8px;
 }
 
 .complete-button,
