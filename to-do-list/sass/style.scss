@@ -1,20 +1,36 @@
+// Variáveis SCSS (opcional)
+$background-color: #f2f2f2;
+$primary-color: #333;
+$delete-button-color: #ff3333;
+$button-background-color: #333;
+$input-border-color: #ccc;
+$task-done-color: #4CAF50; // Cor verde para tarefas concluídas
+$checkbox-active-background: #8BC34A; // Cor verde mais fraco para o checkbox ativado
+$checkbox-border-color: #4CAF50; // Cor da borda do checkbox
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-color: $background-color;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .container {
     max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 h1 {
     text-align: center;
-    color: #333;
+    color: $primary-color;
 }
 
 ul {
@@ -26,41 +42,101 @@ li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
     border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    input[type="checkbox"] {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        border: 1px solid $checkbox-border-color;
+        border-radius: 4px 0 0 4px;
+        margin-right: 10px;
+        cursor: pointer;
+
+        &:checked {
+            + .checkbox-wrapper {
+                background-color: $checkbox-active-background;
+                border: 1px solid $checkbox-border-color;
+            }
+        }
+    }
+
+    &.task-done {
+        background-color: $task-done-color;
+
+        .task-text {
+            color: white;
+            text-decoration: line-through;
+        }
+
+        .complete-button {
+            background-color: $task-done-color;
+            i {
+                color: white;
+            }
+        }
+    }
+}
+
+.checkbox-wrapper {
+    background-color: transparent;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    transition: background-color 0.3s, border 0.3s;
 }
 
 .task-text {
     flex-grow: 2;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 10px; 
 }
 
+.delete-button,
 .complete-button {
-    margin-right: 8px;
-}
-
-.complete-button,
-.delete-button {
     background-color: transparent;
     border: none;
     padding: 5px;
     cursor: pointer;
 }
 
-.complete-button,
-.delete-button i {
-    color: #ff3333;
+.delete-button i,
+.complete-button i {
+    color: $delete-button-color;
 }
 
 input[type="text"] {
     width: 70%;
-    padding: 5px;
+    padding: 8px;
+    border: 1px solid $input-border-color;
+    border-radius: 3px;
 }
 
 button[type="submit"] {
-    background-color: #333;
+    background-color: $button-background-color;
     color: #fff;
     border: none;
-    padding: 5px 10px;
+    padding: 8px 12px;
     cursor: pointer;
     border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: darken($button-background-color, 10%);
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    display: none;
+    margin-top: 5px;
 }
