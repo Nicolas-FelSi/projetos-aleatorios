@@ -5,20 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefas</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/51b23194c0.js" defer crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/51b23194c0.js" crossorigin="anonymous" defer></script>
     <script type="module" src="js/script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Minha Lista de Tarefas</h1>
-        <ul>
-            
-        </ul>
-        <form id="task-form">
-            <input type="text" id="task-input" placeholder="Adicionar uma tarefa">
-            <button type="submit">Adicionar</button>
-        </form>
-        <p class="error-message" id="error-message">Por favor, preencha o campo de tarefa.</p>
-    </div>
+    <header>
+        <h1>Minhas Tarefas</h1>
+    </header>
+    <main>
+        <div class="container">
+            <section class="task-input">
+                <label for="task">Adicionar uma nova tarefa:</label>
+                <div class="input-btn">
+                    <input type="text" id="task" placeholder="Digite sua tarefa">
+                    <button id="add-task">Adicionar</button>
+                </div>
+                <div class="error-message">Por favor, preencha este campo.</div>
+            </section>
+            <ul id="task-list">
+                <!-- Tarefas serão adicionadas aqui como <li> elementos -->
+            </ul>
+        </div>
+    </main>
+    
 </body>
 </html>
+

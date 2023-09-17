@@ -1,30 +1,52 @@
-const btnSubmit = document.querySelector("button[type=submit]")
-const taskInput = document.getElementById("task-input")
-const ul = document.querySelector("ul")
-const errorMessage = document.getElementById("error-message")
+const btnAddTask = document.getElementById("add-task")
+const taskInput = document.getElementById("task")
+const errorMessage = document.querySelector(".error-message")
+const taskList = document.getElementById("task-list")
 
-function criarTarefa() {
-    const tarefaHtml = 
-    `
-    <li>
-        <div class="checkbox-wrapper">
-            <input type="checkbox" class="complete-button">
-        </div>
-        <span class="task-text">${taskInput.value}</span>
-        <button class="delete-button"><i class="fas fa-trash"></i></button>
-    </li>
-    `
-
-    ul.innerHTML += tarefaHtml
-}
-
-btnSubmit.addEventListener("click", (evento) => {
-    evento.preventDefault()
-    
+btnAddTask.addEventListener("click", () => {
     if (taskInput.value === "") {
         errorMessage.style.display = "block"
     } else {
-        criarTarefa()
         errorMessage.style.display = "none"
-    }  
+        criarTarefa()
+    }
+
+    taskInput.value = ""
+    taskInput.focus()
 })
+
+function criarTarefa() {
+    const li = document.createElement("li")
+    const taskLi = 
+    `
+    <span>${taskInput.value}</span>
+    <div>
+        <button class="complete-button"><i class="fas fa-check"></i></button>
+        <button class="delete-button"><i class="fas fa-trash"></i></button>
+    </div>
+    `
+    
+    li.innerHTML = taskLi
+    taskList.appendChild(li)
+
+    const completeButton = li.querySelector(".complete-button");
+    completeButton.addEventListener("click", () => {
+        li.classList.toggle("completed");
+    });
+
+    const deleteButton = li.querySelector(".delete-button")
+    deleteButton.addEventListener("click", () => {
+        taskList.removeChild(li)
+    })
+}
+
+
+
+
+
+
+
+
+
+
+

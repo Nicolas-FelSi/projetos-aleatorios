@@ -1,36 +1,81 @@
-// Variáveis SCSS (opcional)
-$background-color: #f2f2f2;
+// Variáveis
 $primary-color: #333;
-$delete-button-color: #ff3333;
+$background-color: #f0f0f0;
 $button-background-color: #333;
 $input-border-color: #ccc;
-$task-done-color: #4CAF50; // Cor verde para tarefas concluídas
-$checkbox-active-background: #8BC34A; // Cor verde mais fraco para o checkbox ativado
-$checkbox-border-color: #4CAF50; // Cor da borda do checkbox
+$task-done-color: #4CAF50;
+$hover-color: #f0f0f0;
+$delete-button-color: #ff3333;
+$checkbox-hover-color: #4CAF50;
 
+// Estilos globais
 body {
     font-family: Arial, sans-serif;
     background-color: $background-color;
     margin: 0;
     padding: 0;
+}
+
+header {
+    text-align: center;
+    background-color: $primary-color;
+    color: #fff;
+    padding: 10px 0;
+}
+
+main {
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
 }
 
 .container {
     max-width: 400px;
+    margin-top: 20px;
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
     box-sizing: border-box;
 }
 
-h1 {
-    text-align: center;
-    color: $primary-color;
+.task-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    label {
+        margin: 0 10px 8px 0;
+        text-align: center;
+    }
+
+    .input-btn {
+        display: flex;
+    }
+
+    input[type="text"] {
+        flex-grow: 1;
+        padding: 10px;
+        border: 1px solid $input-border-color;
+        border-radius: 5px 0 0 5px;
+        outline: none;
+    }
+
+    button#add-task {
+        background-color: $button-background-color;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .error-message {
+        color: red;
+        font-size: 14px;
+        display: none;
+        margin-top: 4px;
+    }
 }
 
 ul {
@@ -42,101 +87,81 @@ li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #ddd;
-    transition: background-color 0.3s;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
 
     &:last-child {
-        border-bottom: none;
+        margin-bottom: 0;
     }
 
-    input[type="checkbox"] {
-        appearance: none;
-        width: 20px;
-        height: 20px;
-        background-color: white;
-        border: 1px solid $checkbox-border-color;
-        border-radius: 4px 0 0 4px;
-        margin-right: 10px;
-        cursor: pointer;
-
-        &:checked {
-            + .checkbox-wrapper {
-                background-color: $checkbox-active-background;
-                border: 1px solid $checkbox-border-color;
-            }
-        }
+    &:hover {
+        background-color: $hover-color;
     }
 
-    &.task-done {
+    &.completed {
         background-color: $task-done-color;
+        color: #fff;
 
-        .task-text {
-            color: white;
+        span {
             text-decoration: line-through;
         }
 
-        .complete-button {
-            background-color: $task-done-color;
-            i {
-                color: white;
+        .complete-button i {
+            color: $checkbox-hover-color;
+
+            &:hover {
+                color: $primary-color;
+                transition: .5s ease;
             }
         }
     }
+
+    span {
+        max-width: 248px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
 }
 
-.checkbox-wrapper {
-    background-color: transparent;
-    border: none;
-    border-radius: 4px 0 0 4px;
-    transition: background-color 0.3s, border 0.3s;
-}
-
-.task-text {
-    flex-grow: 2;
-    align-items: center;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    padding: 10px; 
-}
-
-.delete-button,
 .complete-button {
-    background-color: transparent;
-    border: none;
-    padding: 5px;
-    cursor: pointer;
+    margin-right: 8px;
 }
 
-.delete-button i,
-.complete-button i {
+.complete-button,
+.delete-button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+.complete-button i,
+.delete-button i {
+    font-size: 18px;
+    color: $primary-color;
+}
+
+.complete-button:hover i {
+    color: $checkbox-hover-color;
+}
+
+.delete-button:hover i {
     color: $delete-button-color;
 }
 
-input[type="text"] {
-    width: 70%;
-    padding: 8px;
-    border: 1px solid $input-border-color;
-    border-radius: 3px;
-}
-
-button[type="submit"] {
-    background-color: $button-background-color;
+.task-done {
+    background-color: $task-done-color;
     color: #fff;
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-    border-radius: 3px;
-    transition: background-color 0.3s;
+    text-decoration: line-through;
 }
 
-button[type="submit"]:hover {
-    background-color: darken($button-background-color, 10%);
-}
-
-.error-message {
-    color: red;
-    font-size: 14px;
-    display: none;
-    margin-top: 5px;
+.fa-check,
+.fa-trash {
+    padding: 0 8px 0 8px;
 }
